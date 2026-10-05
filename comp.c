@@ -2,22 +2,21 @@
 int main()
 {
     char A[10] = "Hello";
-    char B[10] = "HellO";
-    char a,b;
-    int i,j;
-    for (i=0;A[i]!='\0';i++)
+    char B[10] = "Hello";
+    int i,Same = 1;
+    for (i=0;A[i]!='\0' || B[i]!='\0';i++)
     {
-        a=A[i];
+        if(A[i]!=B[i])
+        {
+            Same =0;
+            
+        }
     }
     
-    for(j=0;B[j]!='\0';j++)
-    {
-        b=B[j];
-    }
-    if(a == b)
-    {printf("same");}
+    if(Same)
+    {printf("Equal");}
     else
-    {printf("not equal");}
+    {printf("Not Equal");}
     return 0;
 
 }
