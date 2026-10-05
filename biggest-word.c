@@ -29,7 +29,7 @@ int main() {
 
     return 0;
 }
-*/
+
 #include <stdio.h>
 #include <string.h>
 
@@ -61,5 +61,46 @@ int main() {
     }
     printf("\n");
 
+    return 0;
+} */
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+    char A[100];
+    int i, len = 0, maxlen =0;
+    scanf("%[^\n]", A);
+    int maxstart = 0, start = 0;
+    int n = strlen(A);
+    for(i = 0; i< n; i++)
+    {
+        if(A[i] != ' ' && A[i] != '\0')
+        {
+            len++;
+        }
+        else
+        {
+            if(len>maxlen)
+            {
+                maxlen = len;
+                maxstart =start;
+            }
+            len = 0;
+            start = i+1;
+            
+        }
+        
+    }
+    if(len>maxlen)
+    {
+      maxlen = len;
+      maxstart =start;
+    }
+
+    printf("Biggest word: ");
+    for(i=maxstart; i<maxstart+maxlen; i++)
+    {
+        printf("%c", A[i]);
+    }
     return 0;
 }
