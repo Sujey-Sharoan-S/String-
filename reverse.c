@@ -16,10 +16,5 @@ int main()
         
     }
     printf("%s",A);
-    
-        
-    
-    return 0;
-    
-    
+    return 0; 
 }
