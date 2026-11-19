@@ -2,7 +2,7 @@
 
 int main()
 {
-    char A[] = "hELLO wORLD sujEY";
+    char A[] = "HELLO wORLD sujEY";
     for(int i = 0;A[i]!='\0'; i++)
     {
         if (i == 0 || A[i-1] == ' ')
@@ -10,7 +10,7 @@ int main()
             if ('a'<= A[i] && A[i] <= 'z')
             A[i] -= 32;
         }
-        else if ('A'<= A[i] && A[i] <= 'Z')
+        else if (i!=0 && 'A'<= A[i] && A[i] <= 'Z')
         {
                 A[i] += 32;
         }
